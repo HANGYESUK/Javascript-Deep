@@ -58,6 +58,15 @@ window.b4 = 4;
 console.log(a4 + b4)
 
 
+// Template literals
+
+//backtick - 엔터키 가능, 중간중간 변수넣기 쉬움
+let title = "손흥민"
+console.log(`안녕하세요 ${title} 입니다.`)
+
+let tamplate = `<div>
+                    <p>Hello World</P>
+                <div>`
 
 
 
