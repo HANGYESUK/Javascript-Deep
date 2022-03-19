@@ -69,4 +69,31 @@ let tamplate = `<div>
                 <div>`
 
 
+// tagged literal - `문자` 를 배열로 만들고 ${변수}를 따로 관리함
+function Func4(text, num) {
+    console.log(text);
+    console.log(num);
+}
+
+Func4`안녕하세요 ${title} 입니다.`
+
+//문제 1 
+let pants = 20;
+let socks = 10;
+
+function QFunc1(text, num1, num2) {
+    console.log(text[1] + num2 + text[0] + num1)
+}
+
+QFunc1`바지${pants} 양말${socks}`
+
+//문제2
+function QFunc2(text, num1, num2) {
+    if(num1 <= 0) {
+        console.log(`${text[1]}는 품절입니다.`)
+    }
+    
+}
+
+
 
