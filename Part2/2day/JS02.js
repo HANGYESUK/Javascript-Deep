@@ -1,59 +1,45 @@
-// Arrow function
+// Reference data type - Array, Object는 변수에 값을 저장 안하고 reference를 저장함
+// 그냥 문자와 숫자는 Primitive data type - 변수에 값이 그대로 저장
+let num = 1234;
+let string = '1234';
 
-//Arrow function - 화살표 함수
-let Fucn = ()=>{}
+// Array, Object는 reference를 저장 - 값이 저장된 메로리 주소 저장
+let arr = [1,2,3,4] 
+let obj = { name : 'kim' }
 
-let arr = [1,2,3,4]
 
-//forEach는 콜백함수 사용 - Arrow function 사용하면 코드 줄일수 있음
-arr.forEach((a)=>console.log(a))
 
-//이벤트 리스너 - Arrow function의 this는 부모의 this를 물려받아 사용
-document.getElementById('btn').addEventListener("click", (e)=>{
-    console.log(this)
-})
+// 파라미터와 레퍼런스데이터
+let name1 = { name: 'park' };
 
-//오브젝트 내 함수
-let obj = {
-    Fucn : ()=>{
-        //obj의 this는 window
-        console.log(this)
-    }
+function change(obj) {
+    obj = { name: 'kim' }
 }
 
-obj.Fucn()
+// 파라미터는 change(var obj = name1)이랑 같음
+change(name1)
 
 
-//연습문제
 
-//1번
-let Human = {
-    name : '손흥민',
-    sayHi: function(){
-        console.log("안녕 나는 " + this.name)
-    }
+
+//constructor - 생성자
+// 오브젝트 형태가 리턴됨
+function Func1() {
+    this.name = 'kim',
+    this.age = 26
 }
 
-Human.sayHi()
+let std1 = new Func1()
 
-//2번
-let Data = {
-    data : [1,2,3,4,5],
+
+
+let std2 = new Func1();
+
+std2.sayHi = ()=>{
+    console.log("안녕하세요" + this.name)
 }
 
-Data.plus = function() {
-    let result = 0;
-    this.data.forEach((item)=>{
-        result += item;
-    })
-    console.log(result);
-}
+std2.sayHi()
 
-Data.plus()
 
-//3번
-document.getElementById('btn2').addEventListener('click', function() {
-    setTimeout(()=>{
-        console.log(this.innerHTML)
-    }, 1000)
-})
+
