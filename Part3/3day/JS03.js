@@ -18,7 +18,7 @@ setPormise.then(function(num){
 
 //문제 1
 let imgLoad = new Promise(function(resolve, reject){
-    let img = document.querySelector('#test');
+    let img = document.querySelector('#btn');
     img.addEventListener('load', function(){
         resolve();
     });
