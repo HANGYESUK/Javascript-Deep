@@ -17,3 +17,44 @@ console.log(arr);
 // Deap copy - 주소만 참조하는게 아니라 새로운 객체 생성
 let testArr = ['K', 'o','r','e','a']
 let testArr2 = [...testArr]
+
+
+// Set자료구조 - 반복
+let arpa = ['a','b','c','d','e']
+
+for(let i=0; i<arpa.length; i++) {
+    console.log(arpa[i])
+}
+
+//forEach문
+arpa.forEach((item)=>{
+    console.log(item)
+})
+
+// Set의 메서드 - keys(), values()
+let testSet = new Set(["tiger", "lion", "dog", "cat"]);
+// keys메서드 - Iterator(반복자) 객체 반환 -> next()메서드
+const key_itr = testSet.keys(); 
+// values메서드 - Iterator(반복자) 객체 반환 -> next()메서드
+const val_itr = testSet.values(); 
+
+
+//set을 배열로 바꿈
+let arr3 = [...testSet]
+
+
+// entries() 메서드 - 쌍으로 만듬
+let testSet5 = new Set();
+
+testSet5.add("홍길동");
+testSet5.add("이순신");
+testSet5.add("강감찬");
+
+const entries = testSet5.entries();
+
+for(let i of entries) {
+    console.log(i); // ["홍길동", "홍길동"], ["이순신", "이순신"], ["강감찬", "강감찬"]
+}
+
+
+
